@@ -1,14 +1,100 @@
 {{- define "main" }}
-<main>
-  <h1>{{ .Site.Title }}</h1>
-  <p class="tagline">{{ .Site.Params.tagline }}</p>
-  <p class="description">{{ .Site.Params.description }}</p>
 
-  {{/*
-  Uncomment when the GitHub org is public:
-  <p class="links">
-    <a href="https://github.com/tumblingpotato" rel="noopener">GitHub ↗</a>
-  </p>
-  */}}
-</main>
+<!-- *** TOP CONSTRUCTION BANNER *** -->
+<div class="construction-banner">
+  <span class="construction-banner-inner">&#9888; UNDER CONSTRUCTION &#9888;</span>
+</div>
+
+<div class="container">
+  <table class="content-table">
+    <tr>
+      <td class="content-cell">
+
+        <!-- *** TITLE *** -->
+        <h1>&#127829; {{ .Site.Title }} &#127829;</h1>
+
+        <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+
+        <hr class="fancy-hr">
+
+        <!-- *** WORKER ICONS *** -->
+        <div class="worker-row">
+          {{ partial "worker-icon.html" . }}
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="blink" style="font-size:32px; color:#ff0000;">&#9888;</span>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          {{ partial "worker-icon.html" . }}
+        </div>
+
+        <div class="uc-label">/// Page Under Construction ///</div>
+
+        <hr class="fancy-hr">
+
+        <!-- *** SCROLLING MARQUEE *** -->
+        <marquee behavior="scroll" direction="left" scrollamount="4">
+          <span class="marquee-text">
+            &#9733; Welcome to Tumbling Potato! &#9733; An open-source non-profit &#9733; Something BIG is coming! &#9733; Watch this space! &#9733; Site launching soon! &#9733;
+          </span>
+        </marquee>
+
+        <hr class="fancy-hr">
+
+        <!-- *** INFO TEXT *** -->
+        <p class="info-text">
+          Welcome to the <b>OFFICIAL</b> home page of <b>Tumbling Potato</b>!!!<br>
+          We are an <b>open-source non-profit</b> and we are working REALLY hard on this web site!!<br><br>
+          <span class="blink" style="color: #ff0000; font-size: 18px; font-weight: bold;">
+            &#10024; COMING SOON &#10024;
+          </span><br><br>
+          Please bookmark this page and come back later!!!<br>
+          This site is best viewed at <b>800x600</b> resolution.
+        </p>
+
+        <hr class="fancy-hr">
+
+        <!-- *** VISITOR COUNTER *** -->
+        <div class="counter-area">
+          You are visitor number:<br>
+          <span class="counter-digits">000,417</span>
+        </div>
+
+        <!-- *** GUESTBOOK *** -->
+        <div class="guestbook">
+          &#128214; <a href="#">Sign our Guestbook!</a> &#128214;
+        </div>
+
+        <!-- *** EMAIL *** -->
+        <div class="email-link">
+          &#9993; <a href="mailto:webmaster@tumblingpotato.org">Email the Webmaster</a>
+        </div>
+
+        <hr class="fancy-hr">
+
+        <!-- *** BADGES *** -->
+        <div class="badge-row">
+          <span class="badge">&#127760; Best viewed with Netscape Navigator</span>
+          <span class="badge">&#128187; Made on a Mac</span>
+          <span class="badge"><span class="spin">&#127829;</span> Potato Powered</span>
+        </div>
+
+        <!-- *** WEBRING *** -->
+        <div class="webring">
+          &#9664; <a href="#">Prev</a> |
+          <b>&#127829; The Potato WebRing &#127829;</b>
+          | <a href="#">Next</a> &#9654;
+        </div>
+
+        <!-- *** LAST UPDATED *** -->
+        <div class="last-updated">
+          Last updated: {{ now.Format "January 2, 2006" }} by the Webmaster
+        </div>
+
+      </td>
+    </tr>
+  </table>
+</div>
+
+<!-- *** BOTTOM CONSTRUCTION BANNER *** -->
+<div class="bottom-banner"></div>
+
 {{- end }}

@@ -1,72 +1,266 @@
+/* ~~~ Welcome to 1997 ~~~ */
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-:root {
-  --color-bg: #ffffff;
-  --color-text: #1a1a1a;
-  --color-muted: #888888;
-  --font-serif: Georgia, "Times New Roman", serif;
-  --font-mono: "Courier New", Courier, monospace;
-}
-
-html, body {
-  height: 100%;
+body {
   margin: 0;
   padding: 0;
+  background-color: #c0c0c0;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHklEQVQI12P4////f4Y3b978BwKGN2/e/AcCBigNAGFcJ/kxlCMpAAAAAElFTkSuQmCC");
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
 }
 
-body {
-  background: var(--color-bg);
-  color: var(--color-text);
-  font-family: var(--font-serif);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
-
-main {
+/* === CONSTRUCTION BANNER === */
+.construction-banner {
+  background: repeating-linear-gradient(
+    -45deg,
+    #000000,
+    #000000 20px,
+    #ffcc00 20px,
+    #ffcc00 40px
+  );
+  padding: 6px 0;
   text-align: center;
-  padding: 2rem;
-  max-width: 480px;
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
 }
 
+.construction-banner-inner {
+  background: #000000;
+  color: #ffcc00;
+  display: inline-block;
+  padding: 8px 24px;
+  font-family: "Comic Sans MS", "Chalkboard SE", cursive;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border: 3px solid #ffcc00;
+}
+
+/* === MAIN CONTAINER === */
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* === CENTERED CONTENT TABLE (the 90s way) === */
+.content-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.content-cell {
+  background: #ffffff;
+  border: 2px inset #808080;
+  padding: 20px;
+  vertical-align: top;
+}
+
+/* === TITLE === */
 h1 {
-  font-family: var(--font-mono);
-  font-size: clamp(1.75rem, 5vw, 2.5rem);
-  font-weight: normal;
-  letter-spacing: 0.04em;
-  margin: 0 0 1.25rem;
+  font-family: "Comic Sans MS", "Chalkboard SE", cursive;
+  font-size: 36px;
+  color: #ff0000;
+  text-align: center;
+  margin: 10px 0;
+  text-shadow: 2px 2px #ffcc00;
 }
 
-.tagline {
-  font-size: clamp(1rem, 3vw, 1.2rem);
-  color: var(--color-muted);
-  margin: 0 0 0.75rem;
-  font-style: italic;
+/* === WORKER ICON AREA === */
+.worker-row {
+  text-align: center;
+  padding: 15px 0;
 }
 
-.description {
-  font-size: 0.9rem;
-  color: var(--color-muted);
-  margin: 0;
+.worker-icon {
+  display: inline-block;
+  width: 80px;
+  height: 90px;
 }
 
-.links {
-  margin-top: 2rem;
+/* === MARQUEE TEXT === */
+.marquee-text {
+  font-family: "Comic Sans MS", "Chalkboard SE", cursive;
+  font-size: 20px;
+  color: #0000ff;
+  font-weight: bold;
 }
 
-.links a {
-  color: var(--color-text);
-  text-decoration: none;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  border-bottom: 1px solid var(--color-text);
-  padding-bottom: 1px;
+/* === FLASH / BLINK === */
+@keyframes blink {
+  0%, 49% { visibility: visible; }
+  50%, 100% { visibility: hidden; }
 }
 
-.links a:hover {
-  color: var(--color-muted);
-  border-color: var(--color-muted);
+.blink {
+  animation: blink 0.8s step-end infinite;
+}
+
+/* === HR with 90s style === */
+.fancy-hr {
+  border: none;
+  height: 6px;
+  background: linear-gradient(to right, #ff0000, #ff7700, #ffcc00, #00cc00, #0000ff, #8800aa);
+  margin: 15px 0;
+}
+
+/* === INFO TEXT === */
+.info-text {
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.info-text b {
+  color: #000080;
+}
+
+/* === VISITOR COUNTER === */
+.counter-area {
+  text-align: center;
+  margin: 15px 0 5px;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  color: #333;
+}
+
+.counter-digits {
+  display: inline-block;
+  background: #000;
+  color: #00ff00;
+  font-family: "Courier New", monospace;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 3px 10px;
+  border: 2px inset #808080;
+  letter-spacing: 3px;
+}
+
+/* === GUESTBOOK LINK === */
+.guestbook {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.guestbook a {
+  color: #0000ff;
+  font-family: "Comic Sans MS", "Chalkboard SE", cursive;
+  font-size: 16px;
+}
+
+.guestbook a:hover {
+  color: #ff00ff;
+}
+
+/* === EMAIL LINK === */
+.email-link {
+  text-align: center;
+  margin: 10px 0;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+}
+
+.email-link a {
+  color: #0000ff;
+}
+
+/* === NETSCAPE / IE BADGE ROW === */
+.badge-row {
+  text-align: center;
+  margin: 15px 0 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-block;
+  border: 2px outset #c0c0c0;
+  padding: 4px 10px;
+  background: #e0e0e0;
+  font-family: "Arial", sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  color: #000080;
+  text-transform: uppercase;
+}
+
+/* === BOTTOM BANNER === */
+.bottom-banner {
+  background: repeating-linear-gradient(
+    -45deg,
+    #000000,
+    #000000 20px,
+    #ffcc00 20px,
+    #ffcc00 40px
+  );
+  padding: 4px 0;
+  margin-top: 10px;
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+  height: 20px;
+}
+
+/* === STARS / DECORATIONS === */
+.stars {
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 8px;
+  margin: 5px 0;
+}
+
+/* === UNDER CONSTRUCTION GIF-STYLE TEXT === */
+.uc-label {
+  text-align: center;
+  font-family: "Impact", "Arial Black", sans-serif;
+  font-size: 14px;
+  color: #cc0000;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin: 5px 0;
+}
+
+/* === WEBRING === */
+.webring {
+  text-align: center;
+  font-size: 12px;
+  font-family: "Arial", sans-serif;
+  color: #666;
+  margin: 10px 0 5px;
+  border-top: 1px solid #999;
+  padding-top: 8px;
+}
+
+.webring a {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+/* === LAST UPDATED === */
+.last-updated {
+  text-align: center;
+  font-size: 11px;
+  font-family: "Courier New", monospace;
+  color: #666;
+  margin: 5px 0 15px;
+}
+
+/* === SPINNING POTATO === */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spin {
+  display: inline-block;
+  animation: spin 3s linear infinite;
 }
