@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Site.Title }}</title>
+  <meta name="description" content="{{ .Site.Params.description }}">
+  <meta name="robots" content="noindex, nofollow">
+  {{- with resources.Get "css/main.css" | minify }}
+  <style>{{ .Content | safeCSS }}</style>
+  {{- end }}
+</head>
+<body>
+  {{- block "main" . }}{{- end }}
+</body>
+</html>

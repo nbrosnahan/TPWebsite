@@ -1,0 +1,14 @@
+{{- define "main" }}
+<main>
+  <h1>{{ .Site.Title }}</h1>
+  <p class="tagline">{{ .Site.Params.tagline }}</p>
+  <p class="description">{{ .Site.Params.description }}</p>
+
+  {{/*
+  Uncomment when the GitHub org is public:
+  <p class="links">
+    <a href="https://github.com/tumblingpotato" rel="noopener">GitHub ↗</a>
+  </p>
+  */}}
+</main>
+{{- end }}
