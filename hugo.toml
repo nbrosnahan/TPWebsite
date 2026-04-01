@@ -3,8 +3,12 @@ languageCode = "en-us"
 title = "Tumbling Potato"
 
 [params]
-  tagline = "Something is coming."
-  description = "An open-source non-profit. Stay tuned."
+  tagline = "An open-source non-profit."
+  description = "Tumbling Potato — an open-source non-profit. Writing about software, open source, and building things."
 
 [taxonomies]
-  # Disabled — no tags or categories needed yet
+  tag = "tags"
+  category = "categories"
+
+[pagination]
+  pagerSize = 20
