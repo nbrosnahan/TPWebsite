@@ -3,8 +3,8 @@ languageCode = "en-us"
 title = "Tumbling Potato"
 
 [params]
-  tagline = "An open-source non-profit."
-  description = "Tumbling Potato — an open-source non-profit. Writing about software, open source, and building things."
+  tagline = "A stealth organization"
+  description = "Tumbling Potato — a stealth organization. Who can say what's going on?"
 
 [taxonomies]
   tag = "tags"

@@ -1,7 +1,7 @@
 ---
-title: '{{ replace .File.ContentBaseName "-" " " | title }}'
-date: {{ .Date }}
-lastmod: {{ .Date }}
+title: 'Beginnings'
+date: 2026-04-01T14:35:49-07:00
+lastmod: 2026-04-01T14:35:49-07:00
 description: ""
 tags: []
 categories: []
@@ -11,3 +11,5 @@ draft: false
 # aliases: []
 # weight: 0
 ---
+Let's GOOOOO!!
+
